@@ -4,6 +4,7 @@ machine:
 
 test:
   override:
+    - tox
     - which python
     - type python
     - whereis python
