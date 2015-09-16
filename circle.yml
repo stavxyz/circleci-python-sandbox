@@ -1,0 +1,9 @@
+machine:
+  python:
+    version: 2.7.10
+
+test:
+  override:
+    - which python
+    - type python
+    - whereis python
