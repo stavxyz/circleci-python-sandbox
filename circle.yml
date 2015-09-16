@@ -8,5 +8,7 @@ test:
     - type python
     - whereis python
     - pip install tox
+    - pwd
+    - ls
     - tox
 
