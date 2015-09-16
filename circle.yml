@@ -7,3 +7,4 @@ test:
     - which python
     - type python
     - whereis python
+    - pip install tox
