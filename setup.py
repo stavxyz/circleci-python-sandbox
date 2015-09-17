@@ -24,7 +24,7 @@ package_attributes = {
     'scripts': ['hi.py', 'test_hi.py'],
     'tests_require': TESTS_REQUIRE,
     'url': 'https://github.com/samstav/circleci-sandbox',
-    'version': 1.0.0.,
+    'version': '1.0.0',
 }
 
 
