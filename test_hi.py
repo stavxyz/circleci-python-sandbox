@@ -11,6 +11,12 @@ try:
 except NameError:
     unicode = str
     
+def touni(s, enc='utf8', err='strict'):
+    if isinstance(s, bytes):
+        return s.decode(enc, err)
+    else:
+        return unicode(s or ("" if s is None else s))
+
 
 def we_are_frozen():
     # All of the modules are built-in to the interpreter
@@ -19,8 +25,8 @@ def we_are_frozen():
 def module_path():
     encoding = sys.getfilesystemencoding()
     if we_are_frozen():
-        return os.path.dirname(unicode(b'{}'.format(sys.executable), encoding))
-    return os.path.dirname(unicode(b'{}'.format(__file__), encoding))
+        return os.path.dirname(touni(sys.executable, enc=encoding))
+    return os.path.dirname(touni(__file__, enc=encoding))
 
 
 class TestThings(unittest.TestCase):
