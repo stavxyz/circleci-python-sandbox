@@ -7,7 +7,7 @@ import unittest
 
 
 def we_are_frozen():
-    # All of the modules are built-in to the interpreter, e.g., by py2exe
+    # All of the modules are built-in to the interpreter
     return hasattr(sys, "frozen")
 
 def module_path():
@@ -31,6 +31,8 @@ class TestThings(unittest.TestCase):
         subprocess.call('type python', stderr=subprocess.STDOUT, shell=True)
         print('whereis python')
         subprocess.call('whereis python', stderr=subprocess.STDOUT, shell=True)
+        print('module path')
+        print(module_path())
 
 
 if __name__ == '__main__':
