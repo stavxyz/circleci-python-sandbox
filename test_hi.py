@@ -19,8 +19,8 @@ def we_are_frozen():
 def module_path():
     encoding = sys.getfilesystemencoding()
     if we_are_frozen():
-        return os.path.dirname(unicode(sys.executable, encoding))
-    return os.path.dirname(unicode(__file__, encoding))
+        return os.path.dirname(unicode(b'{}'.format(sys.executable), encoding))
+    return os.path.dirname(unicode(b'{}'.format(__file__), encoding))
 
 
 class TestThings(unittest.TestCase):
