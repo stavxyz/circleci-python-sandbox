@@ -16,7 +16,6 @@ TESTS_REQUIRE = [
 package_attributes = {
     'author': 'Sam Stavionha',
     'author_email': 'smlstvnh@gmail.com',
-    
     'name': 'circleci_sandbox',
     'description': 'See what circleci will do.',
     'install_requires': INSTALL_REQUIRES,
