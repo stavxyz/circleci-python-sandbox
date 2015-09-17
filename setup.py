@@ -17,7 +17,7 @@ package_attributes = {
     'author': 'Sam Stavionha',
     'author_email': 'smlstvnh@gmail.com',
     'name': 'circleci_sandbox',
-    'description': 'See what circleci will do.',
+    'description': '?',
     'install_requires': INSTALL_REQUIRES,
     'py_modules': ['hi'],
     'scripts': ['hi.py', 'test_hi.py'],
