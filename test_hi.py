@@ -1,10 +1,16 @@
 
 from __future__ import print_function
 
+import os
 import subprocess
 import sys
 import unittest
 
+try:
+    unicode
+except NameError:
+    unicode = str
+    
 
 def we_are_frozen():
     # All of the modules are built-in to the interpreter
