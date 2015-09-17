@@ -10,5 +10,6 @@ test:
     - pip install tox
     - pwd
     - ls
+    - hash -d tox
     - tox
 
