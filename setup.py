@@ -21,7 +21,7 @@ package_attributes = {
     'description': 'See what circleci will do.',
     'install_requires': INSTALL_REQUIRES,
     'py_modules': ['hi'],
-    'scripts': ['hi.py'],
+    'scripts': ['hi.py', 'test_hi.py'],
     'tests_require': TESTS_REQUIRE,
     'url': 'https://github.com/samstav/circleci-sandbox',
     'version': 1.0.0.,
