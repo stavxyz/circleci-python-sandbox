@@ -7,5 +7,5 @@ test:
     - pip install tox
     - pwd
     - ls
-    - tox --recreate
+    - tox -v --recreate
 
