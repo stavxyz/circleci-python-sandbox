@@ -1,15 +1,13 @@
 dependencies:
    pre:
      - pip install -U pip
-     - pip install tox
+     - pip install -U tox
 
 test:
   override:
-    - which python
-    - type python
-    - whereis python
     - pip install tox
     - pwd
     - ls
+    - pyenv local 3.4.3 3.3.3 3.2.5 3.1.5 2.7.10 2.6.8
     - tox -v --recreate
 
