@@ -38,10 +38,12 @@ class TestThings(unittest.TestCase):
     def test_is_precisely_correct_version(self):
         
         toxenvname = 'TOX_%s' % os.environ['TOX_ENV_NAME'].upper()
-        print('TOX ENV NAME')
-        print(toxenvname)
-        print('\nPython Version')
-        print(sys.version)
+        expected_version = os.environ[toxenvname]
+        print('TOX ENV NAME: %s' % toxenvname)
+        print('Expected version for tox env: %s' % expected_version) 
+        actual = list(sys.version_info[:3])
+        expected = [int(x) for x in expected_version.split('.')]
+        self.assertEqual(actual, expected)
 
     def test_what_python(self):
         
