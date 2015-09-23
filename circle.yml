@@ -1,4 +1,4 @@
-machine  
+machine:
   environment:
     TOX_PY26: '2.6.8'
     TOX_PY27: '2.7.10'
