@@ -9,5 +9,6 @@ test:
   override:
     - pwd
     - ls
+    - tox --listenvs
     - tox -v --recreate
 
