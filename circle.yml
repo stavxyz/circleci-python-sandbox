@@ -1,4 +1,6 @@
 machine:
+  override:
+    - echo 'not building a virtualenv, leaving this to tox'
   environment:
     TOX_PY26: '2.6.8'
     TOX_PY27: '2.7.10'
@@ -13,12 +15,9 @@ dependencies:
     - pip install -U pip
     - pip install -U tox
   post:
-    - pyenv shell --unset
-    - pyenv local --unset
-    - pyenv global 3.4.3 3.3.3 3.2.5 3.1.5 2.7.10 2.6.8 system
+    - pyenv local 3.4.3 3.3.3 3.2.5 3.1.5 2.7.10 2.6.8
     - pip -V
 
 test:
   override:
-    - unset PYENV_VERSION
     - tox -v --recreate
