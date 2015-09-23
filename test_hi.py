@@ -39,8 +39,8 @@ class TestThings(unittest.TestCase):
         
         toxenvname = 'TOX_%s' % os.environ['TOX_ENV_NAME'].upper()
         expected_version = os.environ[toxenvname]
-        print('TOX ENV NAME: %s' % toxenvname)
-        print('Expected version for tox env: %s' % expected_version) 
+        print('\n\nTOX ENV NAME: %s' % toxenvname)
+        print('\n\nExpected version for this tox env: %s\n\n' % expected_version) 
         actual = list(sys.version_info[:3])
         expected = [int(x) for x in expected_version.split('.')]
         self.assertEqual(actual, expected)
