@@ -45,6 +45,10 @@ class TestThings(unittest.TestCase):
         subprocess.call('whereis python', stderr=subprocess.STDOUT, shell=True)
         print('module path')
         print(module_path())
+        print('\n\nPYTHON VERSION')
+        print('**************')
+        print(sys.version)
+        print('\n\n')
 
 
 if __name__ == '__main__':
