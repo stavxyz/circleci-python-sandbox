@@ -34,6 +34,14 @@ class TestThings(unittest.TestCase):
     def test_the_answer(self):
     
         self.assertEqual(42, 42)
+        
+    def test_is_precisely_correct_version(self):
+        
+        toxenvname = 'TOX_%s' % os.environ['TOX_ENV_NAME'].upper()
+        print('TOX ENV NAME')
+        print(toxenvname)
+        print('\nPython Version')
+        print(sys.version)
 
     def test_what_python(self):
         
