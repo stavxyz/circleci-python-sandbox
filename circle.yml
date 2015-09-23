@@ -20,4 +20,5 @@ dependencies:
 
 test:
   override:
+    - unset PYENV_VERSION
     - tox -v --recreate
