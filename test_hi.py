@@ -33,7 +33,7 @@ class TestThings(unittest.TestCase):
 
     def test_the_answer(self):
     
-        self.assertIs(42, 42)
+        self.assertEqual(42, 42)
 
     def test_what_python(self):
         
