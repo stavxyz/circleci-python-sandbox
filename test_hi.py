@@ -48,7 +48,7 @@ class TestThings(unittest.TestCase):
         print('*************************')
         print(sys.version)
         print('\n')
-        expected_list = [int(x) for x in expected_version.split('.')]
+        expected_list = [int(x) for x in expected_string.split('.')]
         self.assertEqual(actual_list, expected_list)
 
     def test_what_python(self):
