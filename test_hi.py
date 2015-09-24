@@ -38,26 +38,27 @@ class TestThings(unittest.TestCase):
     def test_is_precisely_correct_version(self):
         
         toxenvname = 'TOX_%s' % os.environ['TOX_ENV_NAME'].upper()
-        expected_version = os.environ[toxenvname]
+        expected_string = os.environ[toxenvname]
+        actual_list = list(sys.version_info[:3])
         print('\n\nTOX ENV NAME: %s' % toxenvname)
-        print('\n\nExpected version for this tox env: %s\n\n' % expected_version) 
-        actual = list(sys.version_info[:3])
-        expected = [int(x) for x in expected_version.split('.')]
-        self.assertEqual(actual, expected)
+        print('\nExpected version for this tox env: Python %s\n' % expected_string)
+        print('\nActual version for this tox env: Python %s\n\n' % '.'.join(actual_list))
+        print('\n\nPYTHON VERSION (verbose)')
+        print('**************')
+        print(sys.version)
+        expected_list = [int(x) for x in expected_version.split('.')]
+        self.assertEqual(actual_list, expected_list)
 
     def test_what_python(self):
         
-        print('which python')
+        print('\nwhich python')
         subprocess.call('which python', stderr=subprocess.STDOUT, shell=True)
-        print('type python')
+        print('\ntype python')
         subprocess.call('type python', stderr=subprocess.STDOUT, shell=True)
-        print('whereis python')
+        print('\nwhereis python')
         subprocess.call('whereis python', stderr=subprocess.STDOUT, shell=True)
-        print('module path')
+        print('\nmodule path')
         print(module_path())
-        print('\n\nPYTHON VERSION')
-        print('**************')
-        print(sys.version)
         print('\n\n')
 
 
