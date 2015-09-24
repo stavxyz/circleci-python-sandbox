@@ -42,7 +42,8 @@ class TestThings(unittest.TestCase):
         actual_list = list(sys.version_info[:3])
         print('\n\nTOX ENV NAME: %s' % toxenvname)
         print('\nExpected version for this tox env: Python %s\n' % expected_string)
-        print('\nActual version for this tox env: Python %s\n\n' % '.'.join(actual_list))
+        print('\nActual version for this tox env: Python %s\n\n'
+              % '.'.join([str(x) for x in actual_list]))
         print('\n\nPYTHON VERSION (verbose)')
         print('**************')
         print(sys.version)
