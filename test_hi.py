@@ -41,12 +41,13 @@ class TestThings(unittest.TestCase):
         expected_string = os.environ[toxenvname]
         actual_list = list(sys.version_info[:3])
         print('\n\nTOX ENV NAME: %s' % toxenvname)
-        print('\nExpected version for this tox env: Python %s\n' % expected_string)
-        print('\nActual version for this tox env: Python %s\n\n'
+        print('\nExpected version for this tox env: Python %s' % expected_string)
+        print('Actual version for this tox env: Python %s'
               % '.'.join([str(x) for x in actual_list]))
         print('\n\nPYTHON VERSION (verbose)')
-        print('**************')
+        print('*************************')
         print(sys.version)
+        print('\n')
         expected_list = [int(x) for x in expected_version.split('.')]
         self.assertEqual(actual_list, expected_list)
 
@@ -60,7 +61,7 @@ class TestThings(unittest.TestCase):
         subprocess.call('whereis python', stderr=subprocess.STDOUT, shell=True)
         print('\nmodule path')
         print(module_path())
-        print('\n\n')
+        print('\n')
 
 
 if __name__ == '__main__':
