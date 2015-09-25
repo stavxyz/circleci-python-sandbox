@@ -20,12 +20,6 @@ class PyenvWhichFailed(ToxPyenv):
 
 
 @hookimpl
-def tox_configure(config):
-    from tox import config
-    config.default_factors['py31'] = 'python3.1'
-
-
-@hookimpl
 def tox_get_python_executable(envconfig):
     try:
         pipe = subprocess.Popen(
