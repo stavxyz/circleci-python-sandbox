@@ -12,7 +12,7 @@ dependencies:
     - pip -V
     - pip install -U pip
   post:
-    - pip uninstall tox
+    - pip uninstall --yes tox
     - pip install -e tox
     - pyenv local $TOX_PY34 $TOX_PY33 $TOX_PY32 $TOX_PY31 $TOX_PY27 $TOX_PY26
     - pip -V
