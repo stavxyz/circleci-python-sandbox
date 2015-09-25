@@ -4,17 +4,17 @@ import subprocess
 from tox import hookimpl
 
 
-class ToxPyenv(Exception):
+class ToxPyenvException(Exception):
 
     """Base class for exceptions from this plugin."""
 
 
-class PyenvMissing(ToxPyenv, RuntimeError):
+class PyenvMissing(ToxPyenvException, RuntimeError):
 
     """The pyenv program is not installed."""
 
 
-class PyenvWhichFailed(ToxPyenv):
+class PyenvWhichFailed(ToxPyenvException):
 
     """Calling `pyenv which` failed."""
 
