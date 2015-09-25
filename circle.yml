@@ -8,14 +8,12 @@ machine:
     TOX_PY34: '3.4.3'
 
 dependencies:
-  pre:
+  override:
     - pip -V
     - pip install -U pip
-  post:
-    - pip uninstall --yes tox
-    - pip install -e tox
+    - pip install -U ipdb
+    - pip install --upgrade --editable tox
     - pyenv local $TOX_PY34 $TOX_PY33 $TOX_PY32 $TOX_PY31 $TOX_PY27 $TOX_PY26
-    - pip -V
 
 test:
   override:
